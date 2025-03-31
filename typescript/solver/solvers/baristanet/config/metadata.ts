@@ -1,3 +1,5 @@
+import { AddressZero } from "@ethersproject/constants";
+
 import {
   type BaristanetMetadata,
   BaristanetMetadataSchema,
@@ -23,7 +25,32 @@ const metadata: BaristanetMetadata = {
     },
   ],
   customRules: {
-    rules: [ ],
+    rules: [
+      // {
+      //   name: "filterByTokenAndAmount",
+      //   args: {
+      //     "11155420": {
+      //       "0x5f94BC7Fb4A2779fef010F96b496cD36A909E818": BigInt(50e18),
+      //       [AddressZero]: BigInt(5e15),
+      //     },
+      //     "84532": {
+      //       "0x5f94BC7Fb4A2779fef010F96b496cD36A909E818": BigInt(50e18),
+      //       [AddressZero]: BigInt(5e15),
+      //     },
+      //     "421614": {
+      //       "0xaf88d065e77c8cC2239327C5EDb3A432268e5831": null,
+      //       [AddressZero]: BigInt(5e15),
+      //     },
+      //     "11155111": {
+      //       "0x5f94BC7Fb4A2779fef010F96b496cD36A909E818": BigInt(5e18),
+      //       [AddressZero]: BigInt(5e10),
+      //     },
+      //   },
+      // },
+      {
+        name: "intentNotFilled",
+      },
+    ],
   },
 };
 
