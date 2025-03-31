@@ -7,7 +7,7 @@ import type {
 } from "../../typechain/hyperlane7683/contracts/Hyperlane7683.js";
 import { BaseListener } from "../BaseListener.js";
 import { metadata } from "./config/index.js";
-import type { OpenEventArgs, Hyperlane7683Metadata } from "./types.js";
+import type { OpenEventArgs, BaristanetMetadata } from "./types.js";
 import { log } from "./utils.js";
 import { getLastIndexedBlocks } from "./db.js";
 
@@ -16,7 +16,7 @@ export class BaristanetListener extends BaseListener<
   OpenEvent,
   OpenEventArgs
 > {
-  constructor(metadata: Hyperlane7683Metadata) {
+  constructor(metadata: BaristanetMetadata) {
     const { intentSources, protocolName } = metadata;
     const hyperlane7683Metadata = { contracts: intentSources, protocolName };
 

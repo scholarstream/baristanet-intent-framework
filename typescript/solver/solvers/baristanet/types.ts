@@ -41,6 +41,6 @@ export type IntentData = {
   maxSpent: ResolvedCrossChainOrder["maxSpent"];
 };
 
-export const Hyperlane7683MetadataSchema = BaseMetadataSchema.extend({});
+export const BaristanetMetadataSchema = BaseMetadataSchema.extend({});
 
-export type Hyperlane7683Metadata = z.infer<typeof Hyperlane7683MetadataSchema>;
+export type BaristanetMetadata = z.infer<typeof BaristanetMetadataSchema>;

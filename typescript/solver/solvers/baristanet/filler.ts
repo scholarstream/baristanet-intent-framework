@@ -10,7 +10,7 @@ import {
 import { Erc20__factory } from "../../typechain/factories/contracts/Erc20__factory.js";
 import { Hyperlane7683__factory } from "../../typechain/factories/hyperlane7683/contracts/Hyperlane7683__factory.js";
 import type {
-  Hyperlane7683Metadata,
+  BaristanetMetadata,
   IntentData,
   OpenEventArgs,
 } from "./types.js";
@@ -30,7 +30,7 @@ import { saveBlockNumber } from "./db.js";
 export type Hyperlane7683Rule = BaristanetFiller["rules"][number];
 
 class BaristanetFiller extends BaseFiller<
-  Hyperlane7683Metadata,
+  BaristanetMetadata,
   OpenEventArgs,
   IntentData
 > {

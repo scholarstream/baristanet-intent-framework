@@ -1,11 +1,11 @@
 import { AddressZero } from "@ethersproject/constants";
 
 import {
-  type Hyperlane7683Metadata,
-  Hyperlane7683MetadataSchema,
+  type BaristanetMetadata,
+  BaristanetMetadataSchema,
 } from "../types.js";
 
-const metadata: Hyperlane7683Metadata = {
+const metadata: BaristanetMetadata = {
   protocolName: "Hyperlane7683",
   intentSources: [
     // mainnet
@@ -97,6 +97,6 @@ const metadata: Hyperlane7683Metadata = {
   },
 };
 
-Hyperlane7683MetadataSchema.parse(metadata);
+BaristanetMetadataSchema.parse(metadata);
 
 export default metadata;
