@@ -171,6 +171,11 @@ class BaristanetFiller extends BaseFiller<
             filler,
           );
 
+          // todo(baristanet): borrow
+          // * request /borrow to API
+          // * approved by sequencer
+          // * call LattePool.borrow()
+
           const value =
             bytes32ToAddress(data.maxSpent[index].token) === AddressZero
               ? data.maxSpent[index].amount
