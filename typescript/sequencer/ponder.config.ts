@@ -5,6 +5,10 @@ import { LattePoolAbi } from "./abis/LattePoolAbi";
 
 export default createConfig({
   networks: {
+    baristanet: {
+      chainId: 77424778,
+      transport: http("http://13.60.198.87:8547"),
+    },
     arbitrum: {
       chainId: 421614,
       transport: http("https://arbitrum-sepolia-rpc.publicnode.com"),
@@ -16,16 +20,22 @@ export default createConfig({
   },
   contracts: {
     BrewHouse: {
-      network: "arbitrum",
+      network: "baristanet",
       abi: BrewHouseAbi,
-      address: "0x0eb16726080f6924452055f00c2c196db79c6854",
-      startBlock: 135225059,
+      address: "0x0E376F9a367BD9148d97F4195b017E78999fB554",
+      startBlock: 25,
     },
-    LattePool: {
+    LattePoolA: {
+      network: "arbitrum",
+      abi: LattePoolAbi,
+      address: "0xfca3819dd85017a11aa23ed08f57cd31db8e96cd",
+      startBlock: 138269370,
+    },
+    LattePoolB: {
       network: "base",
       abi: LattePoolAbi,
-      address: "0x0eb16726080f6924452055f00c2c196db79c6854",
-      startBlock: 23502173,
+      address: "0x56545f21dff77950e9fbfc27725f82150a4d7512",
+      startBlock: 23893007,
     },
   },
 });
